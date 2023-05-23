@@ -1,0 +1,39 @@
+npx create-next-app@latest
+npm i yarn
+
+
+npm i react-icons --save
+npm i nodemailer
+
+npm i mongodb
+npm i mongoose
+npm i bcryptjs
+
+npm install @heroicons/react@v1
+
+Redux:
+--------------------------------
+npm i --save redux
+npm i @reduxjs/toolkit
+npm i react-redux
+
+TailwinCSS:
+----------------------------------------------------------------
+npm i @tailwindcss/line-clamp
+npm i -D @tailwindcss/forms
+
+npm audit fix
+
+npm install next-auth
+
+npm i firebase
+npm i firebase-admin
+npm i react-router
+npm i @heroicons/react
+npm i  react-responsive-carousel
+npm i @heroicons/react@v1
+npm i latest-update-project-nimbus-ps4-full-version-f-r-e-e-down-lo-ad-c46k3q
+
+
+
+npm i react-currency-formatter --force        (the issue)
