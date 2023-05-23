@@ -1,0 +1,33 @@
+.input_group {
+    @apply flex border rounded-xl;
+    position: relative;
+}
+
+.input_text{
+    @apply w-full py-4 px-6 border rounded-xl bg-slate-50 focus:outline-none border-none
+}
+
+.btn_3 {
+    @apply w-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-md py-2 text-gray-50 text-lg border border-transparent
+}
+
+.btn_3:hover {
+    @apply bg-gradient-to-r from-gray-50 to-gray-100 border border-blue-500 text-gray-700
+}
+
+.btn_4 {
+    @apply w-full text-xs border py-2 flex justify-center gap-2 hover:bg-gray-200
+}
+
+.btn_5 {
+    @apply w-full text-xs border py-2 flex justify-center gap-2 hover:bg-prime_blue-n5
+}
+
+
+.input_text + *{
+    color: #CBD5E1;
+}
+
+.input_text:focus + *{
+    color: #6366f1;
+}

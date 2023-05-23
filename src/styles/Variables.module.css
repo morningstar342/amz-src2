@@ -1,0 +1,89 @@
+
+
+/*Spans*/
+.span_1 {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 12px;
+}
+
+.span_1::before {
+    content: '';
+    position: absolute;
+    background-color: #CCC;
+    height: 1px;
+    width: 35%;
+    top: 50%;
+    left: 0;
+}
+
+.span_1::after {
+    content: '';
+    position: absolute;
+    background-color: #CCC;
+    height: 1px;
+    width: 35%;
+    top: 50%;
+    right: 0;
+}
+
+
+.span_2{
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    position: absolute;
+    top: 20%;
+    right: 2%;
+}
+
+.span_2:hover {
+    color: #6366f1;
+    cursor: pointer;
+}
+
+.span_3 {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 12px;
+}
+
+.span_3::before {
+    content: '';
+    position: absolute;
+    background-color: #CCC;
+    height: 1px;
+    width: 30%;
+    top: 50%;
+    left: 0;
+}
+
+.span_3::after {
+    content: '';
+    position: absolute;
+    background-color: #CCC;
+    height: 1px;
+    width: 30%;
+    top: 50%;
+    right: 0;
+}
+
+/* Warnings */
+
+.warn_1{
+    display: block;
+    width: 100%;
+    border: 2px solid #FF0000;
+    border-radius: 0.25rem;
+    font-size: 12px;
+    outline-style: none;
+    box-shadow: 0 0 0 0.15rem rgba(255,0,0,.25);
+    padding: 5px 10px;
+}
+
+.warn_1:focus{
+    border: 2px solid #FF0000;
+    box-shadow: 0 0 0 0.10rem rgba(255,0,0,.25);
+}

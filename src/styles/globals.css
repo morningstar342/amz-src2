@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom Utility Classes */
+@layer components {
+    .link {
+        @apply cursor-pointer hover:underline;
+    }
+    /* Buttons */
+    .btn-1 {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-yellow-200 to-yellow-400 border border-yellow-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 active:from-yellow-500;
+    }
+    .btn-2 {
+        @apply p-2 text-xs md:text-sm sm:text-sm bg-gradient-to-b from-gray-200 to-gray-400 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-gray-500 active:from-gray-500 ;
+    }
+    .btn-3 {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-blue-200 to-blue-400 border border-blue-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 active:from-blue-500;
+    }
+    .btn-3 {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-green-200 to-green-400 border border-green-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-green-500 active:from-green-500;
+    }
+    .btn-4 {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-blue-200 to-blue-400 border border-blue-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 active:from-blue-500;
+    }
+    .btn-5 {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-slate-200 to-slate-400 border border-slate-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-slate-500 active:from-slate-500 text-gray-900;
+    }
+    .btn-6 {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-prime_blue-n5 to-prime_blue-n2 border border-prime_blue-n3 rounded-sm focus:outline-none focus:ring-2 focus:ring-prime_blue-n1 active:from-prime_blue-n1 text-gray-900;
+    }
+    .btn-7 {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-amber-200 to-amber-400 border border-amber-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-amber-400 active:from-amber-400 text-gray-900;
+    }
+    .btn-8 {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-teal-200 to-teal-400 border border-teal-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-400 active:from-teal-400 text-teal-900;
+    }
+    .btn-9 {
+        @apply p-2 text-xs md:text-sm bg-gradient-to-b from-pink-200 to-pink-400 border border-pink-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-pink-400 active:from-pink-400 text-pink-900;
+    }
+
+
+
+    /* Input Form */
+    .input-1 {
+        @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:text-xs focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
+    }
+    .input-2 {
+        @apply block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400
+        placeholder:text-xs focus:ring-2 focus:ring-inset focus:ring-green-300 sm:text-sm sm:leading-6;
+    }
+    .input-3 {
+        @apply block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400
+        placeholder:text-xs focus:ring-2 focus:ring-inset focus:ring-prime_blue-n3 sm:text-sm sm:leading-6 border-2 border-transparent focus:border-2 focus:border-prime_blue-n5;
+    }
+
+    /* Warnings */
+    .warn-1 {
+        @apply block w-full rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400
+        placeholder:text-xs focus:ring-2 focus:ring-inset focus:ring-rose-500 sm:text-sm sm:leading-6 border-2 border-rose-500 focus:border-2 focus:border-rose-200;
+    }
+
+
+    /* Border */
+    .border-1 {
+        @apply block w-full rounded-md border-0 p-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400
+        placeholder:text-xs focus:ring-2 focus:ring-inset focus:ring-prime_blue-n3 sm:text-sm sm:leading-6;
+    }
+}
