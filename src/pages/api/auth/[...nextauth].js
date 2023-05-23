@@ -1,38 +1,55 @@
 import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
-// import GithubProvider from "next-auth/providers/github"
+import GithubProvider from "next-auth/providers/github"
+import CredentialsProvider from "next-auth/providers/credentials"
+import connectMongo from "../../../../database/connectMongo"
+import Users from "../../../../model/Schema"
+import {compare} from 'bcryptjs'
 
 
 export const authOptions = {
-    // Configure one or more authentication providers
+  // Configure one or more authentication providers
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_ID,
             clientSecret: process.env.GOOGLE_SECRET,
         }),
         // ...add more providers here
-    ],
+        GithubProvider({
+            clientId: process.env.GITHUB_ID,
+            clientSecret: process.env.GITHUB_SECRET,
+        }),
 
-    // Added New Authentication
-    callbacks: {
-        async jwt({ token, account }) {
-            // Persist the OAuth access_token to the token right after signin
-            if (account) {
-            token.accessToken = account.access_token
+        CredentialsProvider({
+            name: 'Credentials',
+            credentials: {
+                username: { label: "Username", type: "text", placeholder: "jsmith" },
+                password: { label: "Password", type: "password" }
+            },
+            async authorize(credentials, req){
+                connectMongo().catch(error=>{error: 'Connection Failed ...'})
+
+                // Check User Existance
+                const result = await Users.findOne({email: credentials.email})
+                if(!result){
+                    throw new Error('User not Found, Please Signup...')
+                }
+
+                // Compare Password
+                const checkPassword = await compare(credentials.password, result.password)
+
+                //Incorrect Password
+                if(!checkPassword || result.email !== credentials.email) {
+                    throw new Error("Email or Password doesn't Match...")
+                }
+
+                return result;
             }
-            return token
-        },
-        async session({ session, token, user }) {
-            // Send properties to the client, like an access_token from a provider.
-            session.accessToken = token.accessToken
-            return session
-        }
-    }
+        }),
 
-
+    ],
+    secret: "XH6bp/TkLvnUKQiPDEZNyHc0CV+VV5RL/n+HdVHoHHNO="
 }
 
 export default NextAuth(authOptions)
-
-
 
