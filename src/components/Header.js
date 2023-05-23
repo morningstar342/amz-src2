@@ -10,9 +10,14 @@ import {
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { selectItems } from '../slices/basketSlice';
+import Guest from '../components/log/Guest'
+import AuthUser from '../components/log/AuthUser'
+
+
 
 function Header() {
-    const session = useSession();
+    const { data: session } = useSession()
+
     const router = useRouter();
     const items = useSelector(selectItems);
     return (
