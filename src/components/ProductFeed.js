@@ -1,7 +1,6 @@
 // rfce
 import React from 'react'
 import Product from './Product'
-import styles from '../styles/Form.module.css'
 
 function ProductFeed({products}) {
     return (
