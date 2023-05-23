@@ -15,7 +15,6 @@ function Header() {
     const session = useSession();
     const router = useRouter();
     const items = useSelector(selectItems);
-    console.log(session)
     return (
     <header>
         {/* Top Nav */}
@@ -43,7 +42,7 @@ function Header() {
             <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
                 <div onClick={signIn} className='link'>
                     <p className='hover:underlibe'>
-                        {session ? 'Hello, ' + session.user : 'Sign In'}
+                        {session?`Hello, ${session.user.name}`:'Sign in'}
                     </p>
                     <p className='font-bold md:text-sm'>Account & Lists</p>
                 </div>
