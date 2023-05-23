@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 // rfce
 import React from 'react'
 import Product from './Product'

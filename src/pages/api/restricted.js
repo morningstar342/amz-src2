@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import { getServerSession } from "next-auth/next"
 import { authOptions } from "./auth/[...nextauth]"
 

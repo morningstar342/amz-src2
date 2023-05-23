@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable react/no-unescaped-entities */
 /* es7 needed */
 /* rfce */
 import React from 'react';

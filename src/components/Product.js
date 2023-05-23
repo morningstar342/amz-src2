@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/jsx-key */
 import React from 'react'
 import Image from 'next/image'
 import { useState } from 'react';
