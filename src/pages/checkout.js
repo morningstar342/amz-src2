@@ -24,11 +24,12 @@ function Checkout() {
             {/* Left Section */}
             <div className='flex-grow m-5 shadow-sm'>
                 <Image
-                src='https://links.papareact.com/dyz'
-                width={1020}
-                height={250}
-                objectFit='contain'
-                className='cursor-pointer'></Image>
+                    src='https://links.papareact.com/dyz'
+                    width={1020}
+                    height={250}
+                    objectFit='contain'
+                    className='cursor-pointer'
+                ></Image>
 
                 <div className='flex flex-col p-5 space-y-10 bg-white'>
                     <h1 className='text-3xl border-b pb-4 font-bold'>
@@ -37,21 +38,20 @@ function Checkout() {
 
                     {items.map((item, i) => (
                         <CheckoutProduct
-                        key={i}
-                        id={item.id}
-                        title={item.title}
-                        rating={item.rating}
-                        price={item.price}
-                        description={item.description}
-                        category={item.category}
-                        image={item.image}
-                        hasPrime={item.hasPrime}>
+                            key={i}
+                            id={item.id}
+                            title={item.title}
+                            rating={item.rating}
+                            price={item.price}
+                            description={item.description}
+                            category={item.category}
+                            image={item.image}
+                            hasPrime={item.hasPrime}
+                        >
                         </CheckoutProduct>
                     ))}
                 </div>
             </div>
-
-
 
             {/* Right Section */}
             <div className='flex flex-col bg-white p-10 shadow-md'>
