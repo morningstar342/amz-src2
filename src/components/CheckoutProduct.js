@@ -37,24 +37,24 @@ function CheckoutProduct({
     </Image>
 
     <div className='col-span-3 mx-5'>
-        <p>{title}</p>
-        <div className='flex'>
-          {Array(rating).fill().map((_,i) => (
-              <StarIcon key={i} className='h-5 text-yellow-500'></StarIcon>
-          ))}
-        </div>
-        <p className='text-xs my-3 line-clamp-3'>{description}</p>
+      <p>{title}</p>
+      <div className='flex'>
+        {Array(rating).fill().map((_,i) => (
+          <StarIcon key={i} className='h-5 text-yellow-500'></StarIcon>
+        ))}
+      </div>
+      <p className='text-xs my-3 line-clamp-3'>{description}</p>
 
-        <div className='my-5'>
-          <Currency quantity={price} currency='USD'></Currency>
-        </div>
+      <div className='my-5'>
+        <Currency quantity={price} currency='USD'></Currency>
+      </div>
 
-        {hasPrime && (
-          <div className='flex items-center space-x-2 -mt-5'>
-            <img loading='lazy' className='w-12' src="https://links.papareact.com/fdw" alt="" />
-            <p className='text-xs text-gray-500'>FREE Next-dat Delivery</p>
-          </div>
-        )}
+      {hasPrime && (
+        <div className='flex items-center space-x-2 -mt-5'>
+          <img loading='lazy' className='w-12' src="https://links.papareact.com/fdw" alt="" />
+          <p className='text-xs text-gray-500'>FREE Next-dat Delivery</p>
+        </div>
+      )}
     </div>
     <div className='flex flex-col space-y-2 my-auto justify-self-end'>
         <button onClick={addItemToBasket} className='btn-1'>Add to Basket</button>
