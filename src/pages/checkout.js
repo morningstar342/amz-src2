@@ -11,12 +11,17 @@ import { selectTotal } from '../slices/basketSlice';
 import { loadStripe } from '@stripe/stripe-js';
 
 
-const stripePromise = loadStripe();
+const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY);
 
 function Checkout() {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
-  const { data: session } = useSession()
+  const { data: session } = useSession();
+
+  const createCheckoutSession = async() => {
+    const stripe = await stripePromise;
+  };
+
   return (
   <div className='bg-gray-100'>
     <Head>
@@ -65,7 +70,9 @@ function Checkout() {
               <Currency quantity={total} currency='USD'></Currency>
             </span>
           </h2>
-          <button role='link' disabled={!session}
+          <button role='link'
+            onClick={createCheckoutSession}
+            disabled={!session}
             className={`btn-1 mt-2 ${!session && 'btn-2 cursor-not-allowed'}`}>
             {!session ? 'Sign In to Checkout' : 'Proceed to Checkout'}
           </button>

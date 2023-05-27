@@ -1,2 +1,4 @@
 npm install stripe --save
 npm i @stripe/stripe-js
+
+npm i axios
