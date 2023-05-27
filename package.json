@@ -30,6 +30,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router": "^6.11.2",
     "redux": "^4.2.1",
+    "stripe": "^12.7.0",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
