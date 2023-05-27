@@ -16,9 +16,9 @@ import AuthUser from '../components/log/AuthUser'
 
 function Header() {
   const { data: session } = useSession()
-
   const router = useRouter();
   const items = useSelector(selectItems);
+
   return (
     <header>
       {/* Top Nav */}
