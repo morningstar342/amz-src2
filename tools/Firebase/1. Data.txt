@@ -1,0 +1,20 @@
+Firebase/FireStorm
+
+
+1. Initial Steps:
+-----------------------------------------------------
+Create Project
+Choose its Type (web, ios, Android)
+npm i firebase
+npm i -g firebase-tools
+
+npm audit fix
+
+
+firebase login
+firebase init
+firebase deploy
+
+
+
+57.00

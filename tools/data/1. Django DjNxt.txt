@@ -1,0 +1,50 @@
+NextJS + Django DRF
+mkdir django
+mkdir nextjs
+
+1. Initial Steps:
+----------------------------------------
+cd django
+mkdir tools
+py -m venv env
+env\Scripts\activate
+pip install django
+python.exe -m pip install --upgrade pip
+
+2. Project Steps:
+----------------------------------------
+django-admin startproject core .
+django-admin startproject project .
+py manage.py startapp store ==> add to settings.py
+
+pip install black
+pip install isort
+pip install pillow
+pip install django-mptt ==> add to settings.py
+
+pip install djangorestframework ==> add to settings.py
+
+pip install django-cors-headers
+
+py manage.py runserver
+
+
+
+3. Make Freeze File:
+----------------------------------------
+pip freeze > requirements.txt
+
+
+
+
+4. Apps Sterializering:
+----------------------------------------
+Each App do its Serializering to manage with nextjs
+- Models
+- @urls views.ProductListView.as_view()
+- views.py
+- serializers.py
+
+
+
+env\Scripts\activate && py manage.py runserver
