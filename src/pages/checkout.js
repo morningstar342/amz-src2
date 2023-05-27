@@ -9,7 +9,7 @@ import Currency from 'react-currency-formatter';
 import { useSession } from "next-auth/react"
 import { selectTotal } from '../slices/basketSlice';
 import { loadStripe } from '@stripe/stripe-js';
-
+import axios from 'axios';
 
 const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY);
 
@@ -20,6 +20,11 @@ function Checkout() {
 
   const createCheckoutSession = async() => {
     const stripe = await stripePromise;
+    // Call the backend to create checkoutsession
+    const checkoutSession = await axios.post('/api/create-checkout-session', {
+      items: items,
+      email: session.user.email,
+    })
   };
 
   return (
