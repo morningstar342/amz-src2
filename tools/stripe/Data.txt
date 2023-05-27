@@ -1,1 +1,2 @@
 npm install stripe --save
+npm i @stripe/stripe-js

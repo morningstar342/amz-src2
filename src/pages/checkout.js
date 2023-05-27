@@ -61,7 +61,8 @@ function Checkout() {
               <Currency quantity={total} currency='USD'></Currency>
             </span>
           </h2>
-          <button disabled={!session} className={`btn-1 mt-2 ${!session && 'btn-2 cursor-not-allowed'}`}>
+          <button role='link' disabled={!session}
+            className={`btn-1 mt-2 ${!session && 'btn-2 cursor-not-allowed'}`}>
             {!session ? 'Sign In to Checkout' : 'Proceed to Checkout'}
           </button>
         </>
