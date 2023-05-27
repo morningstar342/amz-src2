@@ -9,7 +9,6 @@ function ProductFeed({products}) {
         key={id}
         id={id}
         title={title}
-        rating={rating}
         price={price}
         description={description}
         category={category}
