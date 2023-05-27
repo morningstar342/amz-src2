@@ -44,22 +44,22 @@ function Product({id, title, price, description, category, image}) {
       <h4 className='my-3'>{title}</h4>
 
       <div className='flex'>
-          {Array(rating).fill().map((_,i) => (
-              <StarIcon className='h-5 text-yellow-500'></StarIcon>
-          ))}
+        {Array(rating).fill().map((_,i) => (
+            <StarIcon className='h-5 text-yellow-500'></StarIcon>
+        ))}
       </div>
 
       <p className='text-xs my-2 line-clamp-2'>{description}</p>
 
       <div className='mb-5'>
-          <Currency quantity={price} currency='USD'></Currency>
+        <Currency quantity={price} currency='USD'></Currency>
       </div>
 
       {hasPrime && (
-          <div className='flex items-center space-x-2 -mt-5'>
-              <img className='w-12' src="/imgs/prime.png" alt="" />
-              <p className='text-xs text-gray-500'>FREE Next-dat Delivery</p>
-          </div>
+        <div className='flex items-center space-x-2 -mt-5'>
+          <img className='w-12' src="/imgs/prime.png" alt="" />
+          <p className='text-xs text-gray-500'>FREE Next-dat Delivery</p>
+        </div>
       )}
 
       <button onClick={addItemToBasket} className='mt-auto btn-1'>Add to Basket</button>
