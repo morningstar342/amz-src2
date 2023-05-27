@@ -12,20 +12,22 @@ const MIN_RATING = 1;
 function Product({id, title, price, description, category, image}) {
   const dispatch = useDispatch();
 
+
   const [rating] = useState(
-      // Generate random value from 1 to 5
-      Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
+    // Generate random value from 1 to 5
+    Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
   );
   const [hasPrime] = useState(Math.random() < 0.5);
 
 
-  const addItemToBasket = () =>{
-      const product = {
-          id, title, rating, price, description, category, image, hasPrime,
-      };
 
-      // Sending the product as an action to the REDUX store ... the basket slice
-      dispatch(addToBasket(product));
+  const addItemToBasket = () =>{
+    const product = {
+      id, title, rating, price, description, category, image, hasPrime,
+    };
+
+    // Sending the product as an action to the REDUX store ... the basket slice
+    dispatch(addToBasket(product));
   };
 
   return (
