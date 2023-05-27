@@ -8,6 +8,10 @@ import CheckoutProduct from '../components/CheckoutProduct';
 import Currency from 'react-currency-formatter';
 import { useSession } from "next-auth/react"
 import { selectTotal } from '../slices/basketSlice';
+import { loadStripe } from '@stripe/stripe-js';
+
+
+const stripePromise = loadStripe();
 
 function Checkout() {
   const items = useSelector(selectItems);
