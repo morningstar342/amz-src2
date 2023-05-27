@@ -33,7 +33,9 @@ function CheckoutProduct({
       src={image}
       width={200}
       height={200}
-      objectFit='contain'>
+      objectFit='contain'
+      alt='image'
+    >
     </Image>
 
     <div className='col-span-3 mx-5'>

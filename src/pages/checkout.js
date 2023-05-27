@@ -28,7 +28,7 @@ function Checkout() {
 
     // Redirect user to Stripe checkout
     const result = await stripe.redirectToCheckout({
-      sessionId: checkoutSession.data.id
+      sessionId: checkoutSession.data.id,
     });
 
     if(result.error){
@@ -51,6 +51,7 @@ function Checkout() {
           height={250}
           objectFit='contain'
           className='cursor-pointer'
+          alt='image'
         ></Image>
 
         <div className='flex flex-col p-5 space-y-10 bg-white'>

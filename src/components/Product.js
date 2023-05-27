@@ -38,6 +38,7 @@ function Product({id, title, price, description, category, image}) {
           width={200}
           objectFit='contain'
           className="mx-auto"
+          alt='image'
       >
       </Image>
 
