@@ -12,7 +12,7 @@ import { selectTotal } from '../slices/basketSlice';
 function Checkout() {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
-  const {session} = useSession();
+  const { data: session } = useSession()
   return (
   <div className='bg-gray-100'>
     <Head>
@@ -55,15 +55,13 @@ function Checkout() {
       {/* Right Section */}
       <div className='flex flex-col bg-white p-10 shadow-md'>
         {items.length > 0 && (
-        // like div
         <>
           <h2 className='whitespace-nowrap'>Subtotal ({ items.length } items):
             <span className='font-bold'>
-                <Currency quantity={total} currency='USD'></Currency>
+              <Currency quantity={total} currency='USD'></Currency>
             </span>
           </h2>
-          <button disabled={!session}
-          className={!session ? 'btn-2 mt-2 cursor-not-allowed' : 'btn-1 mt-2'}>
+          <button disabled={!session} className={`btn-1 mt-2 ${!session && 'btn-2 cursor-not-allowed'}`}>
             {!session ? 'Sign In to Checkout' : 'Proceed to Checkout'}
           </button>
         </>
