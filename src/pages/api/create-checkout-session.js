@@ -5,7 +5,7 @@ export default async(req, res) =>{
 
   const transformedItems = items.map(item => ({
     description: item.description,
-    // More quanities add array
+    // More quanities need change
     quantity: 1,
     price_data: {
       currency: 'usd',
@@ -15,5 +15,13 @@ export default async(req, res) =>{
         images: [item.image]
       },
     }
-  }))
+  }));
+
+  const session = new stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: transformedItems,
+    mode: 'payment',
+    success_url: `${process.env.HOST}/success`,
+    cancel_url: ``,
+  })
 }
