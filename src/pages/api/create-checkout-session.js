@@ -22,7 +22,7 @@ export default async(req, res) =>{
     shipping_address_collection: {
       allowed_countries: ['US', 'CA', 'GB', 'EU'],
     },
-    shipping_rates: ['3.58'],
+    // shipping_rates: ['3.58'],
     line_items: transformedItems,
     mode: 'payment',
     success_url: `${process.env.HOST}/success`,
