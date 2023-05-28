@@ -11,7 +11,7 @@ import { selectTotal } from '../slices/basketSlice';
 import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
 
-const stripePromise = loadStripe(process.env.STRIPE_PUBLIC_KEY);
+const stripePromise = loadStripe(process.env.stripe_public_key);
 
 function Checkout() {
   const items = useSelector(selectItems);
@@ -26,14 +26,14 @@ function Checkout() {
       email: session.user.email,
     });
 
-    // Redirect user to Stripe checkout
-    const result = await stripe.redirectToCheckout({
-      sessionId: checkoutSession.data.id,
-    });
+    // // Redirect user to Stripe checkout
+    // const result = await stripe.redirectToCheckout({
+    //   sessionId: checkoutSession.data.id,
+    // });
 
-    if(result.error){
-      alert(result.error.message)
-    };
+    // if(result.error){
+    //   alert(result.error.message)
+    // };
   };
 
   return (
