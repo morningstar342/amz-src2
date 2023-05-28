@@ -26,7 +26,7 @@ function Checkout() {
       email: session.user.email,
     });
 
-    // // Redirect user to Stripe checkout
+    // Redirect user to Stripe checkout
     // const result = await stripe.redirectToCheckout({
     //   sessionId: checkoutSession.data.id,
     // });
